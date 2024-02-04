@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 150px;
+}
+#after{
+    display: none;
+}
+#reject{
+    display: none;
+}
+p {
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 30px;
+}
+input{
+    color: white;
+    padding: 5px 15px 5px 15px;
+    border: none;
+    border-radius: 3px;
+}
+input:hover{
+    cursor: pointer;
+}
+#Yes {
+    background-color: green;
+}
+#Yes:hover{
+    background-color: rgb(6, 114, 6);
+}
+#No {
+    background-color: red;
+}
+#No:hover{
+    background-color: rgb(211, 6, 6);
+}
+
+    </style>
+    <script>
+        function no() {
+            // const a = ["Are you Sure?", "Really Sure?", "Think Again!", "Last Chance!", "you will regret!"];
+            // var i = 0;
+            // var b = 30;
+
+            document.getElementById("No").style.display = "none";
+            document.getElementById("Yes").style.display = "none";
+            document.getElementById("ques").innerHTML = "huhuhuhu😭😭😭";
+            document.getElementById("reject").style.display = "flex";
+            document.getElementById("before").style.display = "none";
+
+        }
+        function yes() {
+            document.getElementById("No").style.display = "none";
+            document.getElementById("Yes").style.display = "none";
+            document.getElementById("ques").innerHTML = "I Love You😭💗";
+            document.getElementById("after").style.display = "flex";
+            document.getElementById("before").style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <div class="all">
+            <img id="before" src="before.gif" alt=""><br>
+            <img id="after" src="accept.gif" alt=""><br>
+            <img id="reject" src="reject.gif" alt=""><br>
+            <p id="ques">Will you be my Valentine?</p>
+            <input type="button" value="Yes" id="Yes" onclick="yes()">
+            <input type="button" value="No" id="No" onclick="no()">
+        </div>
+    </center>
+</body>
+
+</html>
